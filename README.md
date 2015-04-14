@@ -12,6 +12,16 @@ from pyvidcap import Device
 stream = Device()
 stream.saveSnapshot('image.jpg')
 ```
+is PYQT
+```python
+from pyvidcap import Device
+stream = Device()
+buffer, width, height = self.getBuffer()
+qimg = QtGui.QImage.fromData(buffer)
+pixmap = QtGui.QPixmap.fromImage(qimg)
+```
+ 
+
 ## requirements
 
 python 3x
