@@ -9,7 +9,6 @@ def loopCamera():
 	webcamPixmap = QtGui.QPixmap('photo.jpg')
 	webcamImage.setPixmap(webcamPixmap)
 
-pygame.camera.init()
 cam = Device()
 
 a = Qt.QApplication(sys.argv)
@@ -25,6 +24,3 @@ timer = QtCore.QTimer()
 a.connect(timer, Qt.SIGNAL("timeout()"), loopCamera)
 timer.start(1)
 a.exec_()
-
-
-pygame.camera.quit()
