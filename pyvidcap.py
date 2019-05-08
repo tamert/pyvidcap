@@ -34,6 +34,7 @@ class Device:
     def saveSnapshot(self, filename):
         self.getImage().save(filename)
 
+        
 if __name__ == '__main__':
     cam = Device(devnum=0)
     print("Select Device Name: ", cam.getDisplayName())
